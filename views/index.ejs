@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docker Monitor</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <div id="containerInfo">
+    <h1>Docker Container Information</h1>
+    <button onclick="fetchContainerInfo()">Fetch Container Info</button>
+    <!-- <pre id="containerInfoResult"></pre> -->
+    <div id="dataCountContainer">
+      <h3 id="dataCount"></h3>
+    </div>
+  
+  <table>
+    <thead>
+	<tr> 
+		<th>ID</th>
+		<th>Container Name</th>
+		<th>State</th>
+		<th>Uptime</th>
+	</tr>
+    </thead>
+    <tbody id="dataRows">
+    </tbody>
+  </table>
+  </div>
+  <div id="containerLogs">
+    <h1>Docker Container Logs</h1>
+    <label for="containerName">Container Name:</label>
+    <input type="text" id="containerName" placeholder="Enter container name">
+    <button onclick="fetchContainerLogs()">Fetch Container Logs</button>
+    <pre id="containerLogsResult"></pre>
+  </div>
+
+  <script src="/scripts.js"></script>
+</body>
+<%- include('footer'); -%>
+</html>
